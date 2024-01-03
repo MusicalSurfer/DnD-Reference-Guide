@@ -49,6 +49,13 @@ const dndReference = {
         const $resultCard = $(`<span class="result-card"></span>`)
         const $cardTitle = $(`<h3 class="card-title">${name}</h3>`);
         const $moreInfoButton = $(`<button class="more-button">More info</button>`)
+        $moreInfoButton.click(() => {
+            createMoreInfoCard;
+        })
+    },
+
+    createMoreInfoCard: (e) => {
+
     },
 }
 dndReference.mainProgram();
