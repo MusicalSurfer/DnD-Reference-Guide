@@ -4,18 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="global.css"> -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script defer src="script.js"></script>
+    <meta name="description" content="Reference Guide for D&D">
+    <meta name="author" content="Daniel Grady">
     <title>D&D Reference Guide</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div id="main">
         <div id="header">
             <h1>D&D Reference Guide</h1>
+            <div id="topToolBar">Top toolbar</div>
+            <p id="welcomeMessage">Welcome to the D&D Reference Guide.</p>
+            <div id="canvas">
+                <h3 id="searchMessage" class="h3">Search for D&D topic below</h3>
+                <div class="input-group">
+                    <form id="searchForm">
+                        <input type="radio" name="category" value="spells" checked> Spells
+                        <input type="radio" name="category" value="monsters"> Monsters
+                    </form>
+                    <input id="searchBar" type="search" class="form-control rounded" placeholder="Fireball..."
+                        aria-label="Search" aria-describedby="search-addon" />
+                    <button id="searchButton" type="button" class="btn btn-outline-primary"
+                        data-mdb-ripple-init>Search</button>
+                </div>
+                <div id="results">Results go here</div>
+            </div>
         </div>
     </div>
 </body>
