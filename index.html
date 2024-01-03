@@ -20,18 +20,25 @@
             <div id="topToolBar">Top toolbar</div>
             <p id="welcomeMessage">Welcome to the D&D Reference Guide.</p>
             <div id="canvas">
-                <h3 id="searchMessage" class="h3">Search for D&D topic below</h3>
+                <h4 id="searchMessage" class="h4">Search for D&D topic below</h4>
                 <div class="input-group">
                     <form id="searchForm">
                         <input type="radio" name="category" value="spells" checked> Spells
                         <input type="radio" name="category" value="monsters"> Monsters
+                        <input type="radio" name="category" value="classes"> Classes
+                        <input type="radio" name="category" value="races"> Races
+                        <input type="radio" name="category" value="equipment"> Equipment
+                        <input type="radio" name="category" value="feats"> Feats
+                        <input type="radio" name="category" value="features"> Features
+                        <input type="radio" name="category" value="conditions"> Game Mechanics
+                        <input type="radio" name="category" value="ability-scores"> Character Data
                     </form>
-                    <input id="searchBar" type="search" class="form-control rounded" placeholder="Fireball..."
-                        aria-label="Search" aria-describedby="search-addon" />
-                    <button id="searchButton" type="button" class="btn btn-outline-primary"
-                        data-mdb-ripple-init>Search</button>
                 </div>
-                <div id="results">Results go here</div>
+                <input id="searchBar" type="search" class="form-control rounded" placeholder="Fireball..."
+                    aria-label="Search" aria-describedby="search-addon" />
+                <button id="searchButton" type="button" class="btn btn-outline-primary"
+                    data-mdb-ripple-init>Search</button>
+                <div id="results"></div>
             </div>
         </div>
     </div>
