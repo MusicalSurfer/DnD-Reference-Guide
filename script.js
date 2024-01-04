@@ -71,27 +71,33 @@ const dndReference = {
         const name = obj.name;
         const $resultCard = $(`<span class="result-card"></span>`)
         const $moreTitle = $(`<h3 class="more-title">${name}</h3>`);
-
+        console.log('name: ')
+        console.log(name)
         $.get(url, (data) => {
+            console.log('data')
             console.log(data);
             for (dataObj in data) {
+                const name = $(`<h5>${data.name}</h5>`);
                 const topic = dataObj;
                 const description = data[dataObj];
                 const $moreTopic = $(`<h5 class="more-title">${topic}:</h5>`);
                 let $moreDescription = $(`<p class="more-description">${description}</p>`)
 
                 if (Array.isArray(description) && typeof description[0] === 'object') {
-                    for (obj of description) {
+                    for (newObj of description) {
+                        let newUrl = dndReference.apiUrl + obj.url;
+                        console.log(newObj);
                         if (!obj.url) {
-                            for (key in obj) {
-                                const $extraTopic = $(`<p class="extra-topic">${key}: ${obj[key]}</p>`)
+                            for (key in newObj) {
+                                const $extraTopic = $(`<p class="extra-topic">${key}: ${newObj[key]}</p>`)
                                 $('#results').append($moreTopic).append($extraTopic);
                             }
                         }
                         else {
-                            const $descriptionButton = $(`<button>${obj.name}</button>`)
+                            let $descriptionButton = $(`<button>${newObj.name}</button>`)
                             $descriptionButton.click(() => {
-                                dndReference.createMoreInfoCard(obj, obj.url);
+                                console.log(newUrl);
+                                dndReference.buttonHandler(newObj, newUrl);
                             })
 
                             $('#results').append($moreTopic).append($descriptionButton);
@@ -102,9 +108,9 @@ const dndReference = {
                     for (key in description) {
                         if (!Array.isArray(key) && typeof key === 'object') {
                             for (key in description) {
-                                const $descriptionButton = $(`<button>${key.name}</button>`)
+                                let $descriptionButton = $(`<button>${key.name}</button>`)
                                 $descriptionButton.click(() => {
-                                    dndReference.createMoreInfoCard(obj, key.url);
+                                    dndReference.buttonHandler(obj, key.url);
                                 })
 
                                 $('#results').append($moreTopic).append($descriptionButton);
