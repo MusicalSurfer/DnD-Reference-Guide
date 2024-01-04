@@ -54,7 +54,7 @@ const dndReference = {
     createMainResultCard: (obj) => {
         const name = obj.name;
         const url = dndReference.apiUrl + obj.url;
-        const $results = $('#results');
+        const $results = $(`<div id="results" class="card-body"></div>`)
         const $resultCard = $(`<div class="card"></div>`)
         const $cardTitle = $(`<h3 class="card-title">${name}</h3>`);
         const $moreInfoButton = $(`<button type="button" class="btn btn-secondary">More Info</button>`);
@@ -64,8 +64,8 @@ const dndReference = {
                 dndReference.spellsButtonHandler(url)
             });
         }
-
-        $results.append($resultCard).append($cardTitle).append($moreInfoButton);
+        $('#canvas').append($results)
+        $results.append($cardTitle).append($resultCard).append($moreInfoButton);
     },
 
     spellsButtonHandler: (url) => {
@@ -92,13 +92,13 @@ const dndReference = {
             for (let i = 0; i < valTopicArr.length; i++) {
                 const $resultCard = $(`<div class="card"></div>`)
                 const $cardBody = $('<div class="card-body"></div>')
-                const $moreTopic = $(`<h4 class="card">${titleTopicArr[i]}</h4>`)
+                const $moreTopic = $(`<h4 class="card-title">${titleTopicArr[i]}</h4>`)
                 $('#results').append($resultCard);
-                $resultCard.append($cardBody);
                 if (i === 0) {
                     for (let desc of valTopicArr[0]) {
                         const $moreDesc = $(`<p class="card-text">${desc}</p>`)
-                        $cardBody.append($moreTopic);
+                        $resultCard.append($moreTopic);
+                        $resultCard.append($cardBody);
                         $cardBody.append($moreDesc);
                     }
                 } else {
@@ -107,7 +107,8 @@ const dndReference = {
                         console.log(`Could not find ${titleTopicArr[i]}`)
                         continue;
                     }
-                    $cardBody.append($moreTopic);
+                    $resultCard.append($moreTopic);
+                    $resultCard.append($cardBody);
                     $cardBody.append($moreDesc);
                 }
             }
