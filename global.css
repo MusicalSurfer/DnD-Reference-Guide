@@ -1,7 +1,15 @@
+.btn {
+    margin-left: 40px !important;
+}
+
 .more-title {
     padding-top: 10px;
     padding-left: 20px;
     margin-bottom: 0px;
+}
+
+.btn-secondary {
+    /* padding-left: 30px !important; */
 }
 
 .more-topic {
