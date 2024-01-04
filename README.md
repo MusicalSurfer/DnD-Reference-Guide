@@ -6,3 +6,5 @@
 - Spells category is finished.
   
 - Other listed categories are not operational but are listed to show future plans for project.
+
+- Webpage is hosted on surge via: https://dndreference.surge.sh/
