@@ -8,3 +8,9 @@
 - Other listed categories are not operational but are listed to show future plans for project.
 
 - Webpage is hosted on surge via: https://dndreference.surge.sh/
+
+### External Sources
+
+- Bootstrap was used for some styling
+
+- Several google fonts are used.
