@@ -7,7 +7,7 @@ This webpage is a resource of information for D&D players that need more details
 
 
 ## 🚀 Getting Started
-To view this project running, please visit [here](https://musicalsurfer.github.io/DnD-Reference-Guide/).
+To view this project running, please visit hosted site [here](https://musicalsurfer.github.io/DnD-Reference-Guide/).
 
 To get a copy of the project up and running on your local machine for development and testing purposes, follow these steps below:
 
@@ -34,5 +34,5 @@ You need to have Node.js and npm installed on your machine. If you don't have th
 * <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /> - JavaScript runtime</a>
 * <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /> Markup language</a>
 * <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /> - Styling language</a>\
-* <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" /></a>
+* <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" />Styling tool</a>
 
